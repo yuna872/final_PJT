@@ -12,7 +12,6 @@ export default new Vuex.Store({
   },
   mutations: {
     GET_ALL_MOVIES(state, movies) {
-      console.log(movies)
       state.movies = movies
     }
   },
