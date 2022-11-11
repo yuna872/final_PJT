@@ -16,7 +16,12 @@ export default new Vuex.Store({
       state.movies = movies
     },
     ADD_MOVIE(state, info) {
-      state.myMovies.push(info)
+      if (state.myMovies.find((movie) => movie.title === info.title )) {
+        alert('이미 있음')
+      } else {
+        state.myMovies.push(info)  
+      }
+      
     }
   },
   actions: {

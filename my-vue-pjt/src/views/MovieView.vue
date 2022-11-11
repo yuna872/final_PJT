@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='list-box'>
     <!-- {{ topMovies }} -->
     <!-- <MovieCard/> -->
     <MovieCard v-for="movie in topMovies" :key="movie.id" :movie="movie"/>
@@ -14,9 +14,6 @@ export default {
   components : {
     MovieCard
   },
-  created: function() {
-    this.$store.dispatch('getAllMovies')
-  },
   computed: {
     topMovies() {
       return this.$store.state.movies
@@ -26,5 +23,8 @@ export default {
 </script>
 
 <style>
-
+  .list-box{
+    display: flex;
+    flex-wrap: wrap;
+  }
 </style>

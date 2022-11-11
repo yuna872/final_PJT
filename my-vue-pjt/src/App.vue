@@ -1,5 +1,27 @@
 <template>
   <div id="app">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-logo" href="#">
+          <img src="@/assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top logo">
+           <div>최김박플릭스</div>
+        </a>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <nav>
       <router-link to="/movies">Movie</router-link> |
       <router-link to="/random">Random</router-link> |
@@ -9,30 +31,12 @@
   </div>
 </template>
 
+
 <script>
-
-
 export default ({
-  // data() {
-  //   return {
-  //     query: '',
-  //     result: ''
-  //   }
-  // },
-  // methods: {
-  //   getResult(query) {
-  //     axios.get('https://api.themoviedb.org/3/search/movie?  api_key=5af9a2dad723d90711412a6322716aa7query=' + query)
-  //     .then(response => { this.results = response.data.results })
-  //   }
-  // },
-  // created: function() {
-  //   axios({
-  //     method: 'get',
-  //     url: 'https://api.themoviedb.org/3/search/movie',
-
-
-  //   })
-  // }  
+  created: function() {
+    this.$store.dispatch('getAllMovies')
+  },
 })
 </script>
 
@@ -58,5 +62,15 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.logo {
+  width : 40px;
+  height : 30px;
+  margin : 0px 5px
 }
 </style>
