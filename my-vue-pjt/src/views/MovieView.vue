@@ -45,6 +45,6 @@ export default {
   .title-text {
     color : white;
     font-weight: bold;
-    font-size : 25px;
+    font-size : 35px;
   }
 </style>

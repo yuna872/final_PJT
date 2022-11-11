@@ -73,7 +73,7 @@ export default {
   align-content: center;
 }
 .movie-content {
-  width : 60%;
+  width : 70%;
   display: flex;
   margin : 80px auto;
   background-color: #252525;
@@ -84,7 +84,7 @@ export default {
   margin-left: 5px;
 }
 .movie-overview {
-  max-width: 80%;
+  /* max-width: 80%; */
   font-size: 17px;
   color: #dddddd;
 }
@@ -106,6 +106,10 @@ export default {
 }
 .btnFade.btnBlueGreen:hover {
   background: #281eb1;
+}
+
+.random-info {
+  width : 100%
 }
 
 /* rgba(50,50,93,0.25) 0px 6px 12px -2px */

@@ -1,12 +1,12 @@
 <template>
   <div class="mymovie" @click='onCancel' >
-    <div>
+    <div class='mymovie-img-box'>
       <img class='mymovie-img' :src="posterUrl" alt="">
     </div>
     <div class='mymovie-info'>
       <div class='mymovie-title' v-bind:class="{'is-canceled': movie.isCanceled}">{{ movie.info.title }} {{ cancel }}</div>
-      <div>줄거리 : {{ overView }}</div>
       <div>⭐ {{ movie.info.vote_average }}</div>
+      <div>줄거리 : {{ overView }}</div>
     </div>
     
   </div>
@@ -55,9 +55,8 @@ export default {
   display: flex;
   margin-top : 80px;
   background-color: #252525;
-  width : 80%;
-  margin : auto;
-  margin-bottom: 80px;
+  width : 100%;
+  margin : 100px auto;
   box-shadow: rgba(20, 94, 243, 0.25) 0px 6px 12px -2px;
 }
 
@@ -67,15 +66,21 @@ export default {
 }
 
 .mymovie-img {
-  width : 200px;
-  height: 300px;
-  margin-right : 50px;
+  width : 300px;
+  height: 420px;
+  margin : 20px;
   border-radius: 15px;
 }
 
 .mymovie-info {
   padding : 30px;
   font-size: 25px;
+}
+
+.mymovie-img-box {
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
 </style>
