@@ -1,5 +1,7 @@
 # 09_pjt(최지우, 기뮤나, 박시형)
 
+<br/><br/><br/>
+
 ## 박팀장님 리드미 작성 😏
 
 ### 구현한 내용
@@ -66,6 +68,7 @@ const router = new VueRouter({
 export default router
 ```
 
+<br/><br/><br/>
 
 ## 김팀장님 리드미 작성 😚
 
@@ -150,6 +153,7 @@ CANCEL_TOGGLE(state, movieItem) {
 ```
 
 
+<br/><br/><br/>
 
 ## 최팀장님 리드미 작성 🥰
 
