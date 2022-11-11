@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <WatchListForm/>
-    <WatchListItem v-for='movie in myMovies' :key='movie.info.id' :movie="movie"/>
+  <div class='container3'>
+    <div>
+      <WatchListForm/>
+    </div>
+    <div class='watch-box'>
+      <WatchListItem v-for='movie in myMovies' :key='movie.info.id' :movie="movie"/>
+    </div>
   </div>
 </template>
 
@@ -24,5 +28,14 @@ export default {
 </script>
 
 <style>
+
+  .container3 {
+    width : 80%;
+    margin : auto;
+  }
+
+  .watch-box {
+    margin-top : 40px;
+  }
 
 </style>

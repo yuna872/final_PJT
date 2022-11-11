@@ -8,24 +8,21 @@
         </a>
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <router-link class="nav-link" to="/movies" style='text-decoration:none;color:white;'>Movie</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link class="nav-link" to="/random" style='text-decoration:none;color:white;'>Random</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <router-link class="nav-link" to="/watch-list" style='text-decoration:none;color:white;'>WatchList</router-link>
           </li>
         </ul>
       </div>
     </nav>
     <nav>
-      <router-link to="/movies">Movie</router-link> |
-      <router-link to="/random">Random</router-link> |
-      <router-link to="/watch-list">WatchList</router-link>
+      
+      
+      
     </nav>
     <router-view/>
   </div>
@@ -47,7 +44,7 @@ export default ({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 
@@ -60,9 +57,7 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+
 
 .nav-logo {
   display: flex;
@@ -73,4 +68,5 @@ nav a.router-link-exact-active {
   height : 30px;
   margin : 0px 5px
 }
+
 </style>

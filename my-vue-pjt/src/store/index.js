@@ -17,10 +17,11 @@ export default new Vuex.Store({
     },
     ADD_MOVIE(state, info) {
       if (state.myMovies.find((movie) => movie.info.title === info.title )) {
-        alert('이미 있음')
+        alert('이미 목록에 있는 영화입니다.')
       } else {
-        state.myMovies.push({info,isCanceled:false})  
+        state.myMovies.push({info,isCanceled:false})
       } 
+      
     },
     CANCEL_TOGGLE(state, movieItem) {
       state.myMovies = state.myMovies.map((movie) => {
@@ -43,14 +44,18 @@ export default new Vuex.Store({
       })
         .then((res) => {
           context.commit('GET_ALL_MOVIES', res.data.results)
-          console.log(res)
         })
     },
     addMovie(context, inputV) {
       console.log(inputV)
       console.log(context.state.movies)
       const info = context.state.movies.find((movie) => movie.title === inputV)
-      context.commit('ADD_MOVIE', info)
+      if (info === undefined) {
+        alert('올바른 제목을 입력하세요.')
+      } else {
+        context.commit('ADD_MOVIE', info)
+      }
+      
     }
   },
   modules: {

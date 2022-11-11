@@ -22,8 +22,8 @@ export default {
 <style>
   .card-box {
     /* border : solid 2px red; */
-    width : 200px;
-    height : 300px;
+    width : 300px;
+    height : 400px;
     border-radius : 15px;
     background-size : cover;
     margin : 10px;
@@ -39,7 +39,7 @@ export default {
 
   .card-box:hover{
     background-color : white;
-    opacity: 0.5;
+    opacity: 0.7;
     /* color : black; */
     scale: 1.05;
   }
@@ -47,7 +47,11 @@ export default {
   .card-box:hover .info{
     /* background-color : white; */
     opacity: 1;
-    color : black;
+    color : mintcream;
+    font-weight: bold;
+    font-size:300%;
+    transition: opacity 1.5s;
+    text-align: center;
   }
 
 </style>
