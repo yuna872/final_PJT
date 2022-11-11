@@ -16,12 +16,19 @@ export default new Vuex.Store({
       state.movies = movies
     },
     ADD_MOVIE(state, info) {
-      if (state.myMovies.find((movie) => movie.title === info.title )) {
+      if (state.myMovies.find((movie) => movie.info.title === info.title )) {
         alert('이미 있음')
       } else {
-        state.myMovies.push(info)  
-      }
-      
+        state.myMovies.push({info,isCanceled:false})  
+      } 
+    },
+    CANCEL_TOGGLE(state, movieItem) {
+      state.myMovies = state.myMovies.map((movie) => {
+        if (movieItem === movie){
+          movie.isCanceled = !movie.isCanceled          
+        }
+        return movie
+      })
     }
   },
   actions: {

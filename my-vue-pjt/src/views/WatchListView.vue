@@ -1,7 +1,7 @@
 <template>
   <div>
     <WatchListForm/>
-    <WatchListItem v-for='movie in myMovies' :key='movie.id' :movie="movie"/>
+    <WatchListItem v-for='movie in myMovies' :key='movie.info.id' :movie="movie"/>
   </div>
 </template>
 
