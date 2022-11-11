@@ -7,12 +7,16 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     movies: [],
+    myMovies: [],
   },
   getters: {
   },
   mutations: {
     GET_ALL_MOVIES(state, movies) {
       state.movies = movies
+    },
+    ADD_MOVIE(state, info) {
+      state.myMovies.push(info)
     }
   },
   actions: {
@@ -30,6 +34,12 @@ export default new Vuex.Store({
           console.log(res)
         })
     },
+    addMovie(context, inputV) {
+      console.log(inputV)
+      console.log(context.state.movies)
+      const info = context.state.movies.find((movie) => movie.title === inputV)
+      context.commit('ADD_MOVIE', info)
+    }
   },
   modules: {
   }
